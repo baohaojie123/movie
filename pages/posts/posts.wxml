@@ -1,0 +1,27 @@
+<import src="post-item/post-item-template.wxml" />
+<!-- 相对 绝对都可以 推荐相对路径 -->
+<view>
+  <swiper indicator-dots='true' interval='5000' autoplay="true" vertical='{{false}}'>
+    <swiper-item>
+      <image src='/images/vr.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/iqiyi.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/vr.png'></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- <block wx:for="{{posts_key}}" wx:for-item="item" wx:key='index'> -->
+<!-- 简写形式 -->
+<block wx:for="{{posts_content}}" wx:for-item="item" wx:key='index'>
+  <!-- template -->
+  <!-- data-postid 自定义属性 data固定 后面可以继续跟-   -->
+  <view catchtap='onPostTap' data-postid="{{item.postId}}">
+    <template is="postItem" data="{{...item}}"/>
+  </view>
+  
+</block>
+
+

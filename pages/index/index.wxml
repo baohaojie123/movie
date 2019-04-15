@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+<!-- <div> 容器 分隔文档 -->
+<view class="cantainer">
+<!-- image默认值width300培训height225px 只有iphone6下面2px=1rpx-->
+  <image class="user-avatar" src="/images/avatar/1.png"></image>
+  <!-- 只要文本中的文字长按能选中 -->
+  <text class="user-name">Hello,friend</text>
+  <!-- bind和catch区别 catch可以阻止冒泡 -->
+  <view class='moto-container' bind:tap="onTap">
+    <text class="moto">开启</text>
+  </view>
+</view>

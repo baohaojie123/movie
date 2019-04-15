@@ -1,0 +1,56 @@
+/**index.wxss**/
+/* .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+} */
+page{
+  height: 100%;
+   background-color:#b3d4db;
+}
+.cantainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.user-avatar{
+  width:200rpx;
+  height:200rpx;
+  border-radius: 50%;
+  margin-top: 160rpx;
+}
+.user-name{
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-top: 30rpx;
+}
+.moto-container{
+  border: 1px solid #405f80;
+  height: 80rpx;
+  width:200px;
+  border-radius:5px;
+  text-align:center;
+  line-height: 80rpx;
+  margin-top: 200rpx;
+}
+.moto{
+  font-size: 28rpx;
+  margin-top: 200rpx;
+  color: #405f80
+}

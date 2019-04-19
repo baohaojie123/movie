@@ -15,6 +15,7 @@
   <view class='tool'>
     <view class='circle-img'>
     <!-- 小程序要数据绑定 实现数据优先 没有dom。不能像jqeury实现dom操作 -->
+    <!-- template里面最好用绝对路径 -->
       <image wx:if="{{collected}}" catchtap='onCollectionTap' src='/images/icon/collection.png'></image>
       <image wx:else catchtap='onCollectionTap' src='/images/icon/collection-anti.png'></image>
       <image  catchtap='onShareTap' src='/images/icon/share.png' class='share-img'></image>

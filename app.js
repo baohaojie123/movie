@@ -1,6 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
+    console.log('onLauch')
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -11,7 +12,8 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
-    })
+    }),
+  
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -33,7 +35,18 @@ App({
       }
     })
   },
+  onShow: function () {
+    console.log('onShow');
+  },
+  onHide: function () {
+    console.log('onHide');
+  },
+  // 保存全局数据
   globalData: {
+    // 音乐是不是正在被播放
+    g_isPlayingMusic:false,
+    // 哪一个音乐正在被播放
+    g_currentMusicPostId: null,
     userInfo: null
   }
 })

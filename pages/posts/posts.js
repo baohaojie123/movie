@@ -47,58 +47,24 @@ Page({
   },
   onPostTap:function(event){
     
-    // dataset 所有自定义属性的集合
+    // dataset 所有自定义属性的集合 postid
     var postId = event.currentTarget.dataset.postid;
+    console.log('postId:'+postId)
     wx.navigateTo({
       url: 'post-detail/post-detail?id='+postId
     })
   },
-  /*i
-   * 3 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
-  },
-
-  /**
-   *2  生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
+  // onSwiperItemTap: function (event) {
+  //   var postId = event.currentTarget.dataset.postid;
+  //   wx.navigateTo({
+  //     url: 'post-detail/post-detail?id=' + postId,
+  //   })
+  // },
+  onSwiperTap: function(event){
+    // target指的是当前点击的组件 image， currentTarget 事件捕获的组件 swiper
+    var postId = event.target.dataset.postid;
+    wx.navigateTo({
+      url: 'post-detail/post-detail?id='+postId,
+    })
   }
 })
